@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interactive Quiz</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="quiz-container">
+      <!-- Welcome Screen -->
+      <div class="welcome-screen" id="welcomeScreen">
+        <h1>Welcome to the Quiz!</h1>
+        <p>Test your knowledge and see how well you score!</p>
+        <button id="startQuiz">Start Quiz</button>
+      </div>
+
+      <!-- Quiz Screen -->
+      <div class="quiz-screen hidden" id="quizScreen">
+        <div class="quiz-header">
+          <h2 id="questionNumber">Question 1</h2>
+          <!-- <p id="timer" class="hidden"> -->
+          <p id="timer" class="">
+            Time Left: <span id="timeLeft">15</span>s
+          </p>
+        </div>
+        <div id="questionContainer" class="question-container">
+          <p id="questionText">This is the question text</p>
+          <ol id="optionsList" class="options-list">
+            <!-- Options will be dynamically inserted here -->
+          </ol>
+        </div>
+        <div class="quiz-footer">
+          <button id="prevButton" class="">Previous</button>
+          <button id="nextButton">Next</button>
+        </div>
+      </div>
+
+      <!-- Final Score Screen -->
+      <div class="score-screen hidden" id="scoreScreen">
+        <h1>Your Score</h1>
+        <p id="scoreText">You scored 7/10!</p>
+        <button id="restartQuiz">Restart Quiz</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
